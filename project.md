@@ -72,3 +72,14 @@ Terminate program if any of:
 ## Immediate Next Step
 - Probe local environment for the least-complex available tool (e.g., PyRosetta/OpenMM/RDKit)
 - Run a minimal executable test and report computed (not mocked) output
+
+## Environment Validation (Current Container)
+- Attempted package installs for `rdkit-pypi`, `openmm`, `mdtraj`, and `numpy` via `pip`.
+- Result: install failed due outbound proxy/index restriction (`403 Forbidden` to package index), so no new scientific packages could be installed in this session.
+- Existing availability check also showed `pyrosetta`, `openmm`, `rdkit`, `mdtraj`, `MDAnalysis` were not preinstalled.
+
+## Reproducible Probe Script
+- Added: `scripts/env_probe.py`
+- Purpose: quickly test module availability, binary availability (`gmx`, `vina`, `obabel`), and pip index reachability for key packages.
+- Run with:
+  - `python scripts/env_probe.py`
