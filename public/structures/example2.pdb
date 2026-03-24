@@ -1,0 +1,18 @@
+HEADER    PEPTIDE MOCK FOR DEMO
+TITLE     EXAMPLE2 PDB (CA TRACE)
+ATOM      1  CA  GLY B   1      -2.000   0.000   0.000  1.00 20.00           C
+ATOM      2  CA  ALA B   2      -0.500   1.100   0.300  1.00 20.00           C
+ATOM      3  CA  LEU B   3       1.100   1.500   1.200  1.00 20.00           C
+ATOM      4  CA  TYR B   4       2.600   0.900   1.900  1.00 20.00           C
+ATOM      5  CA  SER B   5       3.900  -0.300   1.700  1.00 20.00           C
+ATOM      6  CA  GLN B   6       5.200  -1.100   0.800  1.00 20.00           C
+ATOM      7  CA  LYS B   7       6.600  -0.500   0.200  1.00 20.00           C
+ATOM      8  CA  THR B   8       7.900   0.400   0.700  1.00 20.00           C
+ATOM      9  CA  ILE B   9       9.100   1.100   1.600  1.00 20.00           C
+ATOM     10  CA  ASP B  10      10.400   0.600   2.300  1.00 20.00           C
+ATOM     11  CA  PHE B  11      11.700  -0.400   2.100  1.00 20.00           C
+ATOM     12  CA  GLU B  12      12.900  -1.300   1.200  1.00 20.00           C
+ATOM     13  CA  VAL B  13      14.300  -1.000   0.500  1.00 20.00           C
+ATOM     14  CA  ASN B  14      15.500  -0.100   0.900  1.00 20.00           C
+TER
+END
