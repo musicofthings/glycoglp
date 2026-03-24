@@ -173,6 +173,49 @@ npm run start
 
 ---
 
+
+## Cloudflare Pages Deployment
+
+This project can be deployed to **Cloudflare Pages** using the Next.js adapter workflow.
+
+### Build command (Cloudflare Pages)
+
+Use this as your Cloudflare Pages **Build command**:
+
+```bash
+npm run build:cloudflare
+```
+
+### Build output directory (Cloudflare Pages)
+
+Use this as your **Build output directory**:
+
+```
+.vercel/output/static
+```
+
+### Required scripts
+
+The project includes:
+
+```bash
+npm run build:cloudflare
+```
+
+which executes:
+
+```bash
+npx @cloudflare/next-on-pages@1
+```
+
+For CLI deploys, you can also run:
+
+```bash
+npm run deploy:cloudflare
+```
+
+---
+
 ## Notes / Current Scope
 
 - Glycan detection currently uses residue-name + geometric heuristics and is intended as practical viewer support, not full glycan graph reconstruction.
