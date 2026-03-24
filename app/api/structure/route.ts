@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { NextRequest, NextResponse } from 'next/server';
 import { join } from 'node:path';
 
-const ALLOWED = new Set(['example1', 'example2']);
+const ALLOWED = new Set(['example1', 'example2', 'glyco_demo']);
 
 export async function GET(request: NextRequest) {
   const id = request.nextUrl.searchParams.get('id') ?? 'example1';

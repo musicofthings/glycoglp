@@ -1,17 +1,22 @@
 'use client';
 
-import { type ColorMode, type RepresentationMode, useViewerStore } from '@/lib/state';
+import { type ColorMode, type GlycanRepresentation, type RepresentationMode, useViewerStore } from '@/lib/state';
 
 type Props = { viewerIds: string[] };
 
 const representations: RepresentationMode[] = ['cartoon', 'surface', 'ball-and-stick'];
 const colorModes: ColorMode[] = ['uniform', 'chain-id', 'confidence'];
+const glycanModes: GlycanRepresentation[] = ['stick', 'sphere'];
 
 export default function ControlsPanel({ viewerIds }: Props) {
   const viewers = useViewerStore((s) => s.viewers);
   const ensureViewer = useViewerStore((s) => s.ensureViewer);
   const setRepresentation = useViewerStore((s) => s.setRepresentation);
   const setColorMode = useViewerStore((s) => s.setColorMode);
+  const setShowGlycans = useViewerStore((s) => s.setShowGlycans);
+  const setGlycanOnly = useViewerStore((s) => s.setGlycanOnly);
+  const setHighlightGlycosites = useViewerStore((s) => s.setHighlightGlycosites);
+  const setGlycanRepresentation = useViewerStore((s) => s.setGlycanRepresentation);
 
   return (
     <div className="rounded-lg border border-slate-200 bg-slate-50 p-3">
@@ -36,7 +41,7 @@ export default function ControlsPanel({ viewerIds }: Props) {
                   </button>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="mb-2 flex flex-wrap gap-2">
                 {colorModes.map((mode) => (
                   <button
                     key={mode}
@@ -47,6 +52,44 @@ export default function ControlsPanel({ viewerIds }: Props) {
                     {mode}
                   </button>
                 ))}
+              </div>
+              <div className="mb-2 flex flex-wrap gap-2">
+                {glycanModes.map((mode) => (
+                  <button
+                    key={mode}
+                    type="button"
+                    onClick={() => setGlycanRepresentation(id, mode)}
+                    className={`rounded px-2 py-1 text-xs ${state?.glycanRepresentation === mode ? 'bg-violet-600 text-white' : 'bg-slate-100'}`}
+                  >
+                    glycan {mode}
+                  </button>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3 text-xs">
+                <label className="inline-flex items-center gap-1">
+                  <input
+                    type="checkbox"
+                    checked={Boolean(state?.showGlycans)}
+                    onChange={(e) => setShowGlycans(id, e.target.checked)}
+                  />
+                  Show glycans
+                </label>
+                <label className="inline-flex items-center gap-1">
+                  <input
+                    type="checkbox"
+                    checked={Boolean(state?.glycanOnly)}
+                    onChange={(e) => setGlycanOnly(id, e.target.checked)}
+                  />
+                  Glycan-only
+                </label>
+                <label className="inline-flex items-center gap-1">
+                  <input
+                    type="checkbox"
+                    checked={Boolean(state?.highlightGlycosites)}
+                    onChange={(e) => setHighlightGlycosites(id, e.target.checked)}
+                  />
+                  Highlight glycosites
+                </label>
               </div>
             </div>
           );

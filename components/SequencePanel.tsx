@@ -3,25 +3,32 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ResidueBadge from '@/components/ResidueBadge';
 import { parsePdbSequence, type ResidueEntry } from '@/lib/sequenceMapper';
+import { loadStructureText } from '@/lib/structureSource';
 import { useViewerStore } from '@/lib/state';
 
-type Props = { structureId: string };
+type Props = {
+  viewerId: string;
+  structureId: string;
+};
 
-export default function SequencePanel({ structureId }: Props) {
+export default function SequencePanel({ viewerId, structureId }: Props) {
   const [residues, setResidues] = useState<ResidueEntry[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const viewerState = useViewerStore((s) => s.viewers[structureId]);
+  const viewerState = useViewerStore((s) => s.viewers[viewerId]);
   const ensureViewer = useViewerStore((s) => s.ensureViewer);
   const setSelectedResidue = useViewerStore((s) => s.setSelectedResidue);
   const setHoveredResidue = useViewerStore((s) => s.setHoveredResidue);
 
   useEffect(() => {
-    ensureViewer(structureId);
-    void fetch(`/api/structure?id=${structureId}`)
-      .then((r) => r.text())
-      .then((pdb) => setResidues(parsePdbSequence(pdb)));
-  }, [ensureViewer, structureId]);
+    ensureViewer(viewerId);
+  }, [ensureViewer, viewerId]);
+
+  useEffect(() => {
+    void loadStructureText(structureId, viewerId).then((pdb) => {
+      setResidues(parsePdbSequence(pdb));
+    });
+  }, [structureId, viewerId]);
 
   useEffect(() => {
     if (!viewerState?.selectedResidue || !containerRef.current) return;
@@ -39,6 +46,14 @@ export default function SequencePanel({ structureId }: Props) {
     return map;
   }, [viewerState?.annotations.mutations]);
 
+  const glycoByPosition = useMemo(() => {
+    const map = new Map<number, string>();
+    for (const site of viewerState?.annotations.glycosylation ?? []) {
+      map.set(site.position, `${site.type}: ${(site.glycanResidues ?? []).join('-') || 'glycan chain'}`);
+    }
+    return map;
+  }, [viewerState?.annotations.glycosylation]);
+
   if (!viewerState) return null;
 
   return (
@@ -48,6 +63,7 @@ export default function SequencePanel({ structureId }: Props) {
         {residues.map((residue) => {
           const annotated = viewerState.annotations.highlighted.includes(residue.authSeqId);
           const mutationTip = mutationByPosition.get(residue.authSeqId);
+          const glycoTip = glycoByPosition.get(residue.authSeqId);
 
           return (
             <div key={`${residue.chainId}-${residue.authSeqId}`} data-residue={residue.authSeqId}>
@@ -56,10 +72,12 @@ export default function SequencePanel({ structureId }: Props) {
                 residue={residue.label}
                 selected={viewerState.selectedResidue === residue.authSeqId}
                 annotated={annotated}
-                tooltip={mutationTip ? `Mutation: ${mutationTip}` : undefined}
-                onClick={() => setSelectedResidue(structureId, residue.authSeqId)}
-                onMouseEnter={() => setHoveredResidue(structureId, residue.authSeqId)}
-                onMouseLeave={() => setHoveredResidue(structureId, null)}
+                glycosylated={Boolean(glycoTip) && viewerState.highlightGlycosites}
+                badge={glycoTip ? '🧬' : undefined}
+                tooltip={[glycoTip, mutationTip].filter(Boolean).join(' | ') || undefined}
+                onClick={() => setSelectedResidue(viewerId, residue.authSeqId)}
+                onMouseEnter={() => setHoveredResidue(viewerId, residue.authSeqId)}
+                onMouseLeave={() => setHoveredResidue(viewerId, null)}
               />
             </div>
           );

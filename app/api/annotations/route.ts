@@ -6,11 +6,26 @@ const annotationsById = {
     mutations: [
       { position: 12, from: 'N', to: 'Y' },
       { position: 18, from: 'V', to: 'A' }
-    ]
+    ],
+    glycosylation: []
   },
   example2: {
     highlighted: [2, 7, 14],
-    mutations: [{ position: 7, from: 'L', to: 'F' }]
+    mutations: [{ position: 7, from: 'L', to: 'F' }],
+    glycosylation: []
+  },
+  glyco_demo: {
+    highlighted: [45, 46],
+    mutations: [{ position: 45, from: 'N', to: 'N' }],
+    glycosylation: [
+      {
+        position: 45,
+        type: 'N-linked',
+        confidence: 0.92,
+        chain: 'A',
+        glycanResidues: ['NAG', 'MAN', 'GAL']
+      }
+    ]
   }
 };
 
