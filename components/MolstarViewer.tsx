@@ -2,33 +2,62 @@
 
 import { useEffect, useRef } from 'react';
 import { createPluginUI } from 'molstar/lib/mol-plugin-ui';
+import { renderReact18 } from 'molstar/lib/mol-plugin-ui/react18';
 import { DefaultPluginUISpec } from 'molstar/lib/mol-plugin-ui/spec';
 import { Asset } from 'molstar/lib/mol-util/assets';
 import { detectGlycosylationSites } from '@/lib/glycan';
 import { getAuthSeqIdFromLoci } from '@/lib/molstar';
 import { loadStructureText } from '@/lib/structureSource';
-import { useViewerStore } from '@/lib/state';
+import { type GlycoAnnotation, useViewerStore } from '@/lib/state';
 
 type Props = {
   viewerId: string;
   structureId: string;
 };
 
+type MolstarPlugin = Awaited<ReturnType<typeof createPluginUI>>;
+type MolstarComponent = Awaited<ReturnType<MolstarPlugin['builders']['structure']['tryCreateComponentStatic']>>;
+
 type PluginRef = {
-  plugin: any;
-  proteinComponent?: any;
-  glycanComponent?: any;
+  plugin: MolstarPlugin;
+  proteinComponent?: MolstarComponent;
+  glycanComponent?: MolstarComponent;
+};
+
+type InteractionEvent = {
+  current: {
+    loci: unknown;
+  };
+};
+
+type ApiAnnotations = {
+  highlighted?: number[];
+  mutations?: Array<{ position: number; from: string; to: string }>;
+  glycosylation?: GlycoAnnotation[];
 };
 
 const pluginRegistry = new Map<string, PluginRef>();
 
-async function applyGlycanRepresentations(pluginRef: PluginRef, options: {
-  showGlycans: boolean;
-  glycanOnly: boolean;
-  glycanRepresentation: 'stick' | 'sphere';
-}) {
+function combineGlycoSites(detected: GlycoAnnotation[], fromApi: GlycoAnnotation[]): GlycoAnnotation[] {
+  const merged: GlycoAnnotation[] = [];
+
+  for (const item of [...detected, ...fromApi]) {
+    const exists = merged.some((x) => x.position === item.position && x.chain === item.chain);
+    if (!exists) merged.push(item);
+  }
+
+  return merged;
+}
+
+async function applyGlycanRepresentations(
+  pluginRef: PluginRef,
+  options: {
+    showGlycans: boolean;
+    glycanOnly: boolean;
+    glycanRepresentation: 'stick' | 'sphere';
+  }
+) {
   const { proteinComponent, glycanComponent, plugin } = pluginRef;
-  if (!plugin) return;
 
   if (proteinComponent) {
     await plugin.builders.structure.representation.addRepresentation(proteinComponent, {
@@ -70,47 +99,47 @@ export default function MolstarViewer({ viewerId, structureId }: Props) {
         pluginRegistry.delete(viewerId);
       }
 
-      const plugin = await createPluginUI({ target: hostRef.current!, spec: DefaultPluginUISpec() });
+      const plugin = await createPluginUI({
+        target: hostRef.current!,
+        render: renderReact18,
+        spec: DefaultPluginUISpec()
+      });
       if (!isMounted) return;
 
-      let structureText = await loadStructureText(structureId, viewerId);
+      const structureText = await loadStructureText(structureId, viewerId);
 
-      let data: any;
-      if (structureId.startsWith('upload-')) {
-        data = await plugin.builders.data.rawData({ data: structureText, label: `uploaded-${viewerId}` });
-      } else {
-        data = await plugin.builders.data.download({
-          url: Asset.Url(`/api/structure?id=${structureId}`),
-          isBinary: false
-        });
-      }
+      const data = structureId.startsWith('upload-')
+        ? await plugin.builders.data.rawData({ data: structureText, label: `uploaded-${viewerId}` })
+        : await plugin.builders.data.download({
+            url: Asset.Url(`/api/structure?id=${structureId}`),
+            isBinary: false
+          });
 
       const format = structureText.trimStart().startsWith('data_') ? 'mmcif' : 'pdb';
       const trajectory = await plugin.builders.structure.parseTrajectory(data, format);
-      await plugin.builders.structure.hierarchy.applyPreset(trajectory, 'default');
+      const model = await plugin.builders.structure.createModel(trajectory);
+      const structure = await plugin.builders.structure.createStructure(model, { name: 'model', params: {} });
 
-      const structure = plugin.managers.structure.hierarchy.current.structures?.[0]?.cell?.obj?.data;
-      const proteinComponent = structure
-        ? await plugin.builders.structure.tryCreateComponentStatic(structure, 'polymer', `protein-${viewerId}`)
-        : undefined;
-      const glycanComponent = structure
-        ? await plugin.builders.structure.tryCreateComponentStatic(structure, 'ligand', `glycan-${viewerId}`)
-        : undefined;
+      const proteinComponent = await plugin.builders.structure.tryCreateComponentStatic(
+        structure,
+        'polymer',
+        { label: `protein-${viewerId}` }
+      );
+      const glycanComponent = await plugin.builders.structure.tryCreateComponentStatic(
+        structure,
+        'ligand',
+        { label: `glycan-${viewerId}` }
+      );
 
       const pluginRef: PluginRef = { plugin, proteinComponent, glycanComponent };
       pluginRegistry.set(viewerId, pluginRef);
 
-      const apiAnnotations = await fetch(`/api/annotations?id=${structureId}`).then((r) => r.json()).catch(() => ({
-        highlighted: [],
-        mutations: [],
-        glycosylation: []
-      }));
+      const apiAnnotations: ApiAnnotations = await fetch(`/api/annotations?id=${structureId}`)
+        .then((r) => r.json())
+        .catch(() => ({ highlighted: [], mutations: [], glycosylation: [] }));
 
       const detectedSites = detectGlycosylationSites(structureText);
-      const combinedGlyco = [...detectedSites, ...(apiAnnotations.glycosylation ?? [])].reduce((acc: any[], item: any) => {
-        if (!acc.some((x) => x.position === item.position && x.chain === item.chain)) acc.push(item);
-        return acc;
-      }, []);
+      const combinedGlyco = combineGlycoSites(detectedSites, apiAnnotations.glycosylation ?? []);
 
       setAnnotations(viewerId, {
         highlighted: apiAnnotations.highlighted ?? [],
@@ -124,20 +153,26 @@ export default function MolstarViewer({ viewerId, structureId }: Props) {
         glycanRepresentation: viewerState.glycanRepresentation
       });
 
-      plugin.behaviors.interaction.click.subscribe((event: any) => {
+      plugin.behaviors.interaction.click.subscribe((event: InteractionEvent) => {
         const residue = getAuthSeqIdFromLoci(event.current.loci);
         if (residue !== null) {
           setSelectedResidue(viewerId, residue);
-          plugin.managers.camera.focusLoci(event.current.loci);
+          plugin.managers.camera.focusLoci(
+            event.current.loci as Parameters<typeof plugin.managers.camera.focusLoci>[0]
+          );
         }
       });
 
-      plugin.behaviors.interaction.hover.subscribe((event: any) => {
+      plugin.behaviors.interaction.hover.subscribe((event: InteractionEvent) => {
         const residue = getAuthSeqIdFromLoci(event.current.loci);
         if (residue !== null) {
-          const isGlycoSite = combinedGlyco.some((site: any) => site.position === residue);
+          const isGlycoSite = combinedGlyco.some((site) => site.position === residue);
           if (isGlycoSite) {
-            plugin.managers.interactivity.lociHighlights.highlightOnly({ loci: event.current.loci });
+            plugin.managers.interactivity.lociHighlights.highlightOnly({
+              loci: event.current.loci as Parameters<
+                typeof plugin.managers.interactivity.lociHighlights.highlightOnly
+              >[0]['loci']
+            });
           }
         }
       });
@@ -158,13 +193,6 @@ export default function MolstarViewer({ viewerId, structureId }: Props) {
       showGlycans: viewerState.showGlycans,
       glycanOnly: viewerState.glycanOnly,
       glycanRepresentation: viewerState.glycanRepresentation
-    });
-
-    const structures = ref.plugin.managers.structure.hierarchy.current.structures;
-    if (!structures?.length) return;
-
-    void ref.plugin.managers.structure.component.updateRepresentationsTheme(structures, {
-      color: viewerState.colorMode === 'confidence' ? 'uncertainty' : viewerState.colorMode
     });
 
     if (viewerState.selectedResidue !== null) {
