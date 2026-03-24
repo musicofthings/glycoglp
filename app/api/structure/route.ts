@@ -1,6 +1,6 @@
-import { readFile } from 'node:fs/promises';
 import { NextRequest, NextResponse } from 'next/server';
-import { join } from 'node:path';
+
+export const runtime = 'edge';
 
 const ALLOWED = new Set(['example1', 'example2', 'glyco_demo']);
 
@@ -10,8 +10,14 @@ export async function GET(request: NextRequest) {
     return new NextResponse('Unknown structure id', { status: 404 });
   }
 
-  const filePath = join(process.cwd(), 'public', 'structures', `${id}.pdb`);
-  const data = await readFile(filePath, 'utf8');
+  const fileUrl = new URL(`/structures/${id}.pdb`, request.url);
+  const fileResponse = await fetch(fileUrl);
+
+  if (!fileResponse.ok) {
+    return new NextResponse('Structure file not found', { status: 404 });
+  }
+
+  const data = await fileResponse.text();
 
   return new NextResponse(data, {
     headers: {

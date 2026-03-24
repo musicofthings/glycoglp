@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const runtime = 'edge';
+
 const annotationsById = {
   example1: {
     highlighted: [5, 12, 18, 22],
