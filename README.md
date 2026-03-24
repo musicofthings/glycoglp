@@ -194,6 +194,20 @@ Use this as your **Build output directory**:
 .vercel/output/static
 ```
 
+### Compatibility flags (Cloudflare Pages)
+
+Set this compatibility flag in both **Preview** and **Production** environments:
+
+```
+nodejs_compat
+```
+
+This is also declared in `wrangler.toml` as:
+
+```toml
+compatibility_flags = ["nodejs_compat"]
+```
+
 ### Required scripts
 
 The project includes:
