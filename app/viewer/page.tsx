@@ -9,6 +9,10 @@ import { useViewerStore } from '@/lib/state';
 const VIEWER_IDS = ['viewer-a', 'viewer-b'];
 const DEMOS = ['example1', 'example2', 'glyco_demo'];
 
+function getDefaultStructureId(viewerId: string): string {
+  return viewerId.endsWith('b') ? 'glyco_demo' : 'example1';
+}
+
 export default function ViewerPage() {
   const viewers = useViewerStore((s) => s.viewers);
   const ensureViewer = useViewerStore((s) => s.ensureViewer);
@@ -39,7 +43,7 @@ export default function ViewerPage() {
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           {VIEWER_IDS.map((viewerId) => {
             const viewer = viewers[viewerId];
-            const structureId = viewer?.structureId ?? 'example1';
+            const structureId = viewer?.structureId ?? getDefaultStructureId(viewerId);
 
             return (
               <section key={viewerId} className="rounded-lg border border-slate-200 bg-white p-3 shadow-sm">
