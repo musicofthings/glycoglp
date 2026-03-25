@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent } from 'react';
+import { ChangeEvent, useEffect } from 'react';
 import ControlsPanel from '@/components/ControlsPanel';
 import MolstarViewer from '@/components/MolstarViewer';
 import SequencePanel from '@/components/SequencePanel';
@@ -14,6 +14,10 @@ export default function ViewerPage() {
   const ensureViewer = useViewerStore((s) => s.ensureViewer);
   const setStructureId = useViewerStore((s) => s.setStructureId);
   const setUploadedPdb = useViewerStore((s) => s.setUploadedPdb);
+
+  useEffect(() => {
+    VIEWER_IDS.forEach((viewerId) => ensureViewer(viewerId));
+  }, [ensureViewer]);
 
   const onUpload = (viewerId: string) => async (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -35,7 +39,6 @@ export default function ViewerPage() {
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           {VIEWER_IDS.map((viewerId) => {
             const viewer = viewers[viewerId];
-            if (!viewer) ensureViewer(viewerId);
             const structureId = viewer?.structureId ?? 'example1';
 
             return (

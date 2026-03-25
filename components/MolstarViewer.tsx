@@ -16,12 +16,15 @@ type Props = {
 };
 
 type MolstarPlugin = Awaited<ReturnType<typeof createPluginUI>>;
-type MolstarComponent = Awaited<ReturnType<MolstarPlugin['builders']['structure']['tryCreateComponentStatic']>>;
+type MolstarComponent = Awaited<
+  ReturnType<MolstarPlugin['builders']['structure']['tryCreateComponentStatic']>
+>;
 
 type PluginRef = {
   plugin: MolstarPlugin;
   proteinComponent?: MolstarComponent;
   glycanComponent?: MolstarComponent;
+  structureId: string;
 };
 
 type InteractionEvent = {
@@ -79,16 +82,19 @@ async function applyGlycanRepresentations(
 export default function MolstarViewer({ viewerId, structureId }: Props) {
   const hostRef = useRef<HTMLDivElement>(null);
   const ensureViewer = useViewerStore((s) => s.ensureViewer);
-  const viewerState = useViewerStore((s) => s.viewers[viewerId]);
   const setSelectedResidue = useViewerStore((s) => s.setSelectedResidue);
   const setAnnotations = useViewerStore((s) => s.setAnnotations);
+  const selectedResidue = useViewerStore((s) => s.viewers[viewerId]?.selectedResidue);
+  const showGlycans = useViewerStore((s) => s.viewers[viewerId]?.showGlycans ?? true);
+  const glycanOnly = useViewerStore((s) => s.viewers[viewerId]?.glycanOnly ?? false);
+  const glycanRepresentation = useViewerStore((s) => s.viewers[viewerId]?.glycanRepresentation ?? 'stick');
 
   useEffect(() => {
     ensureViewer(viewerId);
   }, [ensureViewer, viewerId]);
 
   useEffect(() => {
-    if (!hostRef.current || !viewerState) return;
+    if (!hostRef.current) return;
 
     let isMounted = true;
 
@@ -104,9 +110,16 @@ export default function MolstarViewer({ viewerId, structureId }: Props) {
         render: renderReact18,
         spec: DefaultPluginUISpec()
       });
-      if (!isMounted) return;
+      if (!isMounted) {
+        plugin.dispose();
+        return;
+      }
 
       const structureText = await loadStructureText(structureId, viewerId);
+      if (!structureText.trim()) {
+        plugin.log.warn('No structure data available.');
+        return;
+      }
 
       const data = structureId.startsWith('upload-')
         ? await plugin.builders.data.rawData({ data: structureText, label: `uploaded-${viewerId}` })
@@ -120,18 +133,14 @@ export default function MolstarViewer({ viewerId, structureId }: Props) {
       const model = await plugin.builders.structure.createModel(trajectory);
       const structure = await plugin.builders.structure.createStructure(model, { name: 'model', params: {} });
 
-      const proteinComponent = await plugin.builders.structure.tryCreateComponentStatic(
-        structure,
-        'polymer',
-        { label: `protein-${viewerId}` }
-      );
-      const glycanComponent = await plugin.builders.structure.tryCreateComponentStatic(
-        structure,
-        'ligand',
-        { label: `glycan-${viewerId}` }
-      );
+      const proteinComponent = await plugin.builders.structure.tryCreateComponentStatic(structure, 'polymer', {
+        label: `protein-${viewerId}`
+      });
+      const glycanComponent = await plugin.builders.structure.tryCreateComponentStatic(structure, 'ligand', {
+        label: `glycan-${viewerId}`
+      });
 
-      const pluginRef: PluginRef = { plugin, proteinComponent, glycanComponent };
+      const pluginRef: PluginRef = { plugin, proteinComponent, glycanComponent, structureId };
       pluginRegistry.set(viewerId, pluginRef);
 
       const apiAnnotations: ApiAnnotations = await fetch(`/api/annotations?id=${structureId}`)
@@ -148,9 +157,9 @@ export default function MolstarViewer({ viewerId, structureId }: Props) {
       });
 
       await applyGlycanRepresentations(pluginRef, {
-        showGlycans: viewerState.showGlycans,
-        glycanOnly: viewerState.glycanOnly,
-        glycanRepresentation: viewerState.glycanRepresentation
+        showGlycans,
+        glycanOnly,
+        glycanRepresentation
       });
 
       plugin.behaviors.interaction.click.subscribe((event: InteractionEvent) => {
@@ -182,23 +191,28 @@ export default function MolstarViewer({ viewerId, structureId }: Props) {
 
     return () => {
       isMounted = false;
+      const current = pluginRegistry.get(viewerId);
+      if (current?.plugin) {
+        current.plugin.dispose();
+        pluginRegistry.delete(viewerId);
+      }
     };
-  }, [setAnnotations, setSelectedResidue, structureId, viewerId, viewerState]);
+  }, [setAnnotations, setSelectedResidue, structureId, viewerId]);
 
   useEffect(() => {
     const ref = pluginRegistry.get(viewerId);
-    if (!ref || !viewerState) return;
+    if (!ref || ref.structureId !== structureId) return;
 
     void applyGlycanRepresentations(ref, {
-      showGlycans: viewerState.showGlycans,
-      glycanOnly: viewerState.glycanOnly,
-      glycanRepresentation: viewerState.glycanRepresentation
+      showGlycans,
+      glycanOnly,
+      glycanRepresentation
     });
 
-    if (viewerState.selectedResidue !== null) {
-      ref.plugin.log.message(`Selected residue ${viewerState.selectedResidue}`);
+    if (selectedResidue !== null) {
+      ref.plugin.log.message(`Selected residue ${selectedResidue}`);
     }
-  }, [viewerId, viewerState]);
+  }, [glycanOnly, glycanRepresentation, selectedResidue, showGlycans, structureId, viewerId]);
 
   return <div ref={hostRef} className="h-[420px] w-full overflow-hidden rounded border border-slate-200" />;
 }
