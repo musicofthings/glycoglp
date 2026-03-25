@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { type ColorMode, type GlycanRepresentation, type RepresentationMode, useViewerStore } from '@/lib/state';
 
 type Props = { viewerIds: string[] };
@@ -18,13 +19,16 @@ export default function ControlsPanel({ viewerIds }: Props) {
   const setHighlightGlycosites = useViewerStore((s) => s.setHighlightGlycosites);
   const setGlycanRepresentation = useViewerStore((s) => s.setGlycanRepresentation);
 
+  useEffect(() => {
+    viewerIds.forEach((id) => ensureViewer(id));
+  }, [ensureViewer, viewerIds]);
+
   return (
     <div className="rounded-lg border border-slate-200 bg-slate-50 p-3">
       <h3 className="mb-3 text-sm font-semibold">Viewer Controls</h3>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {viewerIds.map((id) => {
           const state = viewers[id];
-          if (!state) ensureViewer(id);
 
           return (
             <div key={id} className="rounded border border-slate-200 bg-white p-2">
@@ -36,6 +40,7 @@ export default function ControlsPanel({ viewerIds }: Props) {
                     type="button"
                     onClick={() => setRepresentation(id, mode)}
                     className={`rounded px-2 py-1 text-xs ${state?.representation === mode ? 'bg-blue-600 text-white' : 'bg-slate-100'}`}
+                    title={`Set protein representation to ${mode}`}
                   >
                     {mode}
                   </button>
@@ -48,6 +53,7 @@ export default function ControlsPanel({ viewerIds }: Props) {
                     type="button"
                     onClick={() => setColorMode(id, mode)}
                     className={`rounded px-2 py-1 text-xs ${state?.colorMode === mode ? 'bg-blue-600 text-white' : 'bg-slate-100'}`}
+                    title={`Set color mode to ${mode}`}
                   >
                     {mode}
                   </button>
@@ -60,6 +66,7 @@ export default function ControlsPanel({ viewerIds }: Props) {
                     type="button"
                     onClick={() => setGlycanRepresentation(id, mode)}
                     className={`rounded px-2 py-1 text-xs ${state?.glycanRepresentation === mode ? 'bg-violet-600 text-white' : 'bg-slate-100'}`}
+                    title={`Set glycan representation to ${mode}`}
                   >
                     glycan {mode}
                   </button>
@@ -71,6 +78,7 @@ export default function ControlsPanel({ viewerIds }: Props) {
                     type="checkbox"
                     checked={Boolean(state?.showGlycans)}
                     onChange={(e) => setShowGlycans(id, e.target.checked)}
+                    title="Toggle display of all glycans"
                   />
                   Show glycans
                 </label>
@@ -79,6 +87,7 @@ export default function ControlsPanel({ viewerIds }: Props) {
                     type="checkbox"
                     checked={Boolean(state?.glycanOnly)}
                     onChange={(e) => setGlycanOnly(id, e.target.checked)}
+                    title="Show glycans while fading protein representation"
                   />
                   Glycan-only
                 </label>
@@ -87,6 +96,7 @@ export default function ControlsPanel({ viewerIds }: Props) {
                     type="checkbox"
                     checked={Boolean(state?.highlightGlycosites)}
                     onChange={(e) => setHighlightGlycosites(id, e.target.checked)}
+                    title="Highlight sequence residues with glycosylation annotations"
                   />
                   Highlight glycosites
                 </label>

@@ -2,10 +2,10 @@
 
 A production-oriented **Next.js App Router** application for interactive peptide/protein visualization with **Mol\***, including:
 
-- sequence ↔ structure residue synchronization,
-- glycan-aware detection and rendering,
-- side-by-side comparison viewers,
+- original Mol* plugin interface embedded in-app,
+- side-by-side structure viewers,
 - upload support for local PDB/mmCIF files,
+- live structure search from RCSB PDB and AlphaFold DB,
 - lightweight API routes for structures + annotations.
 
 ---
@@ -13,17 +13,13 @@ A production-oriented **Next.js App Router** application for interactive peptide
 ## Feature Overview
 
 ### 1) Core Molecular Viewer
-- Mol* plugin initialized per viewer panel.
-- Loads structures from API (`/api/structure?id=...`) or uploaded local files.
+- Mol* plugin initialized per viewer panel using the default `DefaultPluginUISpec()` interface.
+- Loads structures from API (`/api/structure?source=...&id=...`) or uploaded local files.
 - Supports basic interactive navigation (rotate/zoom/pan from Mol* defaults).
 - Multi-view layout for direct structural comparison.
+- Uses Mol*'s native controls/sidebar workflow for structure analysis.
 
-### 2) Sequence ↔ Structure Synchronization
-- Sequence panel is generated from structure content (`CA` records for PDB parsing).
-- Clicking sequence residues updates shared selection state.
-- Clicking residues in 3D updates selected residue in state and sequence panel scroll target.
-
-### 3) Annotation Layer
+### 2) Annotation Layer
 - API-backed annotations from `/api/annotations?id=...`.
 - Supported annotation types:
   - `highlighted` residues,
@@ -31,7 +27,7 @@ A production-oriented **Next.js App Router** application for interactive peptide
   - `glycosylation`.
 - Sequence badges/tooltips reflect annotation context.
 
-### 4) Glycan-Aware Support
+### 3) Glycan-Aware Support
 - Glycan residue detection supports known residue names:
   - `NAG`, `MAN`, `BMA`, `GAL`, `FUC`, `SIA`.
 - Includes heuristic fallback for non-standard 3-letter residues.
@@ -42,18 +38,7 @@ A production-oriented **Next.js App Router** application for interactive peptide
   - `Unknown`.
 - Glycosylated sequence residues are visually marked with special color + badge.
 
-### 5) Controls (Per Viewer)
-- Protein representation controls:
-  - `cartoon`, `surface`, `ball-and-stick`.
-- Color controls:
-  - `uniform`, `chain-id`, `confidence` (mapped to Mol* uncertainty theme where applicable).
-- Glycan controls:
-  - show/hide glycans,
-  - glycan-only mode,
-  - highlight glycosylation sites,
-  - glycan representation mode (`stick` / `sphere`).
-
-### 6) File Upload + Demo Data
+### 4) File Upload + Demo Data
 - Upload local `.pdb`, `.cif`, `.mmcif`, `.ent`, `.txt` files per viewer.
 - Format auto-detection for uploaded text:
   - mmCIF when content starts with `data_`, otherwise PDB.
@@ -61,6 +46,18 @@ A production-oriented **Next.js App Router** application for interactive peptide
   - `example1` (non-glycosylated)
   - `example2` (non-glycosylated)
   - `glyco_demo` (glycosylated demo)
+- Default starting structure includes a real entry from RCSB:
+  - `4Z18` (PD-L1)
+
+### 5) External Structure Retrieval
+- Search and load structures directly from:
+  - **RCSB PDB** (keyword/full-text search with selectable hits),
+  - **AlphaFold DB** (search and load via accession-based entries).
+- API route `GET /api/structure` supports:
+  - local demo source (`source=demo&id=...`),
+  - RCSB fetch (`source=rcsb&id=4Z18`),
+  - AlphaFold fetch (`source=alphafold&id=P0DTC2`),
+  - PDBe fetch (`source=pdbe&id=4z18`).
 
 ---
 
@@ -105,13 +102,22 @@ public/
 
 ## API Endpoints
 
-### `GET /api/structure?id=<id>`
-Returns structure text from `public/structures/<id>.pdb`.
+### `GET /api/structure?source=<source>&id=<id>`
+Returns structure text from local demos or remote databases.
 
-Supported demo IDs:
-- `example1`
-- `example2`
-- `glyco_demo`
+Sources:
+- `demo` (local `public/structures/<id>.pdb`)
+- `rcsb` (`https://files.rcsb.org/download/<id>.pdb`)
+- `alphafold` (`https://alphafold.ebi.ac.uk/files/AF-<id>-F1-model_v4.pdb`)
+- `pdbe` (`https://www.ebi.ac.uk/pdbe/entry-files/download/pdb<id>.ent`)
+
+Examples:
+- `/api/structure?source=demo&id=glyco_demo`
+- `/api/structure?source=rcsb&id=4Z18`
+- `/api/structure?source=alphafold&id=P0DTC2`
+
+### `GET /api/structure-search?source=<source>&q=<query>`
+Searches external databases and returns compact structure hit lists for UI selection.
 
 ### `GET /api/annotations?id=<id>`
 Returns JSON annotations, including optional glycosylation metadata.
@@ -153,6 +159,8 @@ npm run dev
 Open: `http://localhost:3000/viewer`
 
 Home page: `http://localhost:3000/` (landing page with button to open the viewer)
+
+Mol* usage docs: `https://molstar.org/viewer-docs/`
 
 ### Production Build
 

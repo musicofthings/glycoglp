@@ -32,8 +32,10 @@ const annotationsById = {
 };
 
 export async function GET(request: NextRequest) {
-  const id = request.nextUrl.searchParams.get('id') as keyof typeof annotationsById;
-  const payload = annotationsById[id] ?? annotationsById.example1;
+  const rawId = request.nextUrl.searchParams.get('id') ?? 'example1';
+  const [, parsedId = rawId] = rawId.split(':');
+  const id = parsedId as keyof typeof annotationsById;
+  const payload = annotationsById[id] ?? { highlighted: [], mutations: [], glycosylation: [] };
 
   return NextResponse.json(payload);
 }
