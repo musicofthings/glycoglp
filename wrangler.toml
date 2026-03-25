@@ -1,0 +1,7 @@
+name = "glycoglp-molstar-viewer"
+compatibility_date = "2026-03-24"
+compatibility_flags = ["nodejs_compat"]
+
+# Ensures Cloudflare Pages validates/deploys the generated adapter output,
+# not the repository root (which can include large local build caches).
+pages_build_output_dir = ".vercel/output/static"
