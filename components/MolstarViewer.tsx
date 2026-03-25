@@ -156,10 +156,11 @@ export default function MolstarViewer({ viewerId, structureId }: Props) {
         glycosylation: combinedGlyco
       });
 
+      const stateViewer = useViewerStore.getState().viewers[viewerId];
       await applyGlycanRepresentations(pluginRef, {
-        showGlycans,
-        glycanOnly,
-        glycanRepresentation
+        showGlycans: stateViewer?.showGlycans ?? true,
+        glycanOnly: stateViewer?.glycanOnly ?? false,
+        glycanRepresentation: stateViewer?.glycanRepresentation ?? 'stick'
       });
 
       plugin.behaviors.interaction.click.subscribe((event: InteractionEvent) => {

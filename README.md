@@ -152,6 +152,8 @@ npm run dev
 
 Open: `http://localhost:3000/viewer`
 
+Home page: `http://localhost:3000/` (landing page with button to open the viewer)
+
 ### Production Build
 
 ```bash
