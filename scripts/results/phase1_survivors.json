@@ -1,0 +1,564 @@
+[
+  {
+    "candidate_id": "GLP1-GM-696A4F",
+    "phase_generated": 1,
+    "sequence": "HTEGTFTSDVSAYLQGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5723.179999999999,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked)"
+  },
+  {
+    "candidate_id": "GLP1-GM-3506A4",
+    "phase_generated": 1,
+    "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "",
+    "mutations": [],
+    "sasa_suppression_pct": 80.83660800794136,
+    "masked_binding_score": 0.3873010506386754,
+    "af3_confidence": 73.99846213076735,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5710.139999999999,
+    "synthesis_notes": "Backbone: native; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked)"
+  },
+  {
+    "candidate_id": "GLP1-GM-DE565D",
+    "phase_generated": 1,
+    "sequence": "HTNGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 3,
+        "detail": "E9N",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 3,
+        "from": "E",
+        "to": "N"
+      }
+    ],
+    "sasa_suppression_pct": 80.27725386888143,
+    "masked_binding_score": 0.41897684893358195,
+    "af3_confidence": 71.61342513356793,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5725.15,
+    "synthesis_notes": "Backbone: A8T_E9N; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked)"
+  },
+  {
+    "candidate_id": "GLP1-GM-4FBA8C",
+    "phase_generated": 1,
+    "sequence": "HBEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8B",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "B"
+      }
+    ],
+    "sasa_suppression_pct": 79.13353486713905,
+    "masked_binding_score": 0.4498290077229831,
+    "af3_confidence": 76.95347493055884,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5750.199999999999,
+    "synthesis_notes": "Backbone: Aib8; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked)"
+  },
+  {
+    "candidate_id": "GLP1-GM-A175A5",
+    "phase_generated": 1,
+    "sequence": "HTEGTFTSDVSAYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      }
+    ],
+    "sasa_suppression_pct": 79.03908532175726,
+    "masked_binding_score": 0.4619932268017031,
+    "af3_confidence": 73.11276046517472,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5724.16,
+    "synthesis_notes": "Backbone: A8T_S18A; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked)"
+  },
+  {
+    "candidate_id": "GLP1-GM-C72857",
+    "phase_generated": 1,
+    "sequence": "HTEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      }
+    ],
+    "sasa_suppression_pct": 77.65891010904416,
+    "masked_binding_score": 0.3765866258273074,
+    "af3_confidence": 74.60433814691233,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5740.15,
+    "synthesis_notes": "Backbone: A8T; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked)"
+  },
+  {
+    "candidate_id": "GLP1-GM-7616B4",
+    "phase_generated": 1,
+    "sequence": "HTEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 2,
+        "detail": "biantennary_sialylated (N-linked) at pos 8",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 2,
+    "linker_type": "",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      }
+    ],
+    "sasa_suppression_pct": 77.22359802897175,
+    "masked_binding_score": 0.3647114570233604,
+    "af3_confidence": 74.53105093630035,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5740.15,
+    "synthesis_notes": "Backbone: A8T; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 8 (N-linked)"
+  },
+  {
+    "candidate_id": "GLP1-GM-85FD02",
+    "phase_generated": 1,
+    "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "glycan",
+        "position": 2,
+        "detail": "biantennary_sialylated (N-linked) at pos 8",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 2,
+    "linker_type": "",
+    "mutations": [],
+    "sasa_suppression_pct": 76.08595905550399,
+    "masked_binding_score": 0.344272772082117,
+    "af3_confidence": 72.09665725679807,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5710.139999999999,
+    "synthesis_notes": "Backbone: native; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 8 (N-linked)"
+  },
+  {
+    "candidate_id": "GLP1-GM-017DF5",
+    "phase_generated": 1,
+    "sequence": "HTEGTFTSDVSAYLQGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 2,
+        "detail": "biantennary_sialylated (N-linked) at pos 8",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 2,
+    "linker_type": "",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      }
+    ],
+    "sasa_suppression_pct": 76.06558252896762,
+    "masked_binding_score": 0.3959179297939183,
+    "af3_confidence": 73.76499242529316,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5723.179999999999,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 8 (N-linked)"
+  },
+  {
+    "candidate_id": "GLP1-GM-E693E9",
+    "phase_generated": 1,
+    "sequence": "HBEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8B",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 2,
+        "detail": "biantennary_sialylated (N-linked) at pos 8",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 2,
+    "linker_type": "",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "B"
+      }
+    ],
+    "sasa_suppression_pct": 76.05313088520828,
+    "masked_binding_score": 0.41339593528089835,
+    "af3_confidence": 77.21499294247323,
+    "linker_half_life_h": 0.0,
+    "activation_curve": [],
+    "timing_quality": 0.0,
+    "unmasked_binding_score": 0.0,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5750.199999999999,
+    "synthesis_notes": "Backbone: Aib8; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 8 (N-linked)"
+  }
+]

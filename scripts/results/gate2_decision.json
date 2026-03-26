@@ -1,0 +1,31 @@
+{
+  "phase": 2,
+  "gate_id": "GATE_2_TIMING",
+  "passed": true,
+  "candidates_in": 20,
+  "candidates_out": 5,
+  "criteria_met": {
+    "t_half_in_window": 16,
+    "timing_quality_ok": 20,
+    "both": 16
+  },
+  "action": "proceed",
+  "pruned_ids": [
+    "GLP1-GM-C3C7A9",
+    "GLP1-GM-3B9589",
+    "GLP1-GM-53AE4B",
+    "GLP1-GM-EE18BF",
+    "GLP1-GM-3C77BF",
+    "GLP1-GM-DCC859",
+    "GLP1-GM-643FEC",
+    "GLP1-GM-B71518",
+    "GLP1-GM-20178F",
+    "GLP1-GM-F0B9F8",
+    "GLP1-GM-68AB16",
+    "GLP1-GM-EBE0DC",
+    "GLP1-GM-2FAE3D",
+    "GLP1-GM-B19A5E",
+    "GLP1-GM-2C3187"
+  ],
+  "notes": "Window: t\u00bd 1.0\u20136.0 h, timing_quality \u2265 0.45"
+}

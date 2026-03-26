@@ -1,0 +1,35 @@
+[
+  {
+    "rank": 1,
+    "id": "GLP1-GM-F54D54",
+    "glycan": "biantennary_sialylated",
+    "linker": "cathepsin_GFLG",
+    "sasa_supp_pct": 82.5,
+    "t_half_h": 5.72,
+    "efficacy_pct": 102.7,
+    "stability": 0.805,
+    "final_score": 0.794
+  },
+  {
+    "rank": 2,
+    "id": "GLP1-GM-942303",
+    "glycan": "biantennary_sialylated",
+    "linker": "cathepsin_GFLG",
+    "sasa_supp_pct": 82.5,
+    "t_half_h": 5.72,
+    "efficacy_pct": 101.1,
+    "stability": 0.765,
+    "final_score": 0.7844
+  },
+  {
+    "rank": 3,
+    "id": "GLP1-GM-E562AD",
+    "glycan": "biantennary_sialylated",
+    "linker": "cathepsin_GFLG",
+    "sasa_supp_pct": 82.5,
+    "t_half_h": 5.72,
+    "efficacy_pct": 92.8,
+    "stability": 0.679,
+    "final_score": 0.7472
+  }
+]

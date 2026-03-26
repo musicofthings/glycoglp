@@ -10,7 +10,12 @@ const DEMOS = [
   { label: '4Z18 (PD-L1, RCSB)', value: 'rcsb:4Z18' },
   { label: 'example1 (demo)', value: 'demo:example1' },
   { label: 'example2 (demo)', value: 'demo:example2' },
-  { label: 'glyco_demo (demo)', value: 'demo:glyco_demo' }
+  { label: 'glyco_demo (demo)', value: 'demo:glyco_demo' },
+  // ── GLP-1 Glyco-Masking Program ──
+  { label: 'GLP-1 Reference (unmasked)', value: 'demo:glp1_reference' },
+  { label: '[Rank 1] GLP1-GM-F54D54 — sialylated + GFLG, 82.5% SASA supp', value: 'demo:glp1_gm_f54d54' },
+  { label: '[Rank 2] GLP1-GM-942303 — sialylated + GFLG, 101% efficacy',    value: 'demo:glp1_gm_942303' },
+  { label: '[Rank 3] GLP1-GM-E562AD — sialylated + GFLG, 92.8% efficacy',   value: 'demo:glp1_gm_e562ad' },
 ];
 
 type SearchSource = 'rcsb' | 'alphafold';
