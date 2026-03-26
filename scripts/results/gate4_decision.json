@@ -1,0 +1,13 @@
+{
+  "phase": 4,
+  "gate_id": "GATE_4_PK_TEMPORAL",
+  "passed": true,
+  "candidates_in": 3,
+  "candidates_out": 3,
+  "criteria_met": {
+    "late_early_ratio_>=3x_baseline": 3
+  },
+  "action": "proceed",
+  "pruned_ids": [],
+  "notes": "Baseline GLP-1 late/early ratio \u2248 1.05. Required \u2265 3.15 (3\u00d7 improvement)."
+}

@@ -1,0 +1,315 @@
+[
+  {
+    "candidate_id": "GLP1-GM-F54D54",
+    "phase_generated": 3,
+    "sequence": "HTEGTFTSDVSAYLQGQAWKEAIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Cathepsin B-cleavable tetrapeptide GFLG",
+        "smiles": "NCC(=O)NC(Cc1ccccc1)C(=O)NC(CC(C)C)C(=O)NCC(=O)O"
+      },
+      {
+        "type": "mutation",
+        "position": 19,
+        "detail": "Y25W \u2014 ",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 22,
+        "detail": "G28A \u2014 ",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "cathepsin_GFLG",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      },
+      {
+        "position": 19,
+        "from": "Y",
+        "to": "W"
+      },
+      {
+        "position": 22,
+        "from": "G",
+        "to": "A"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 5.717099716234989,
+    "activation_curve": [
+      0.0,
+      0.2210646730303166,
+      0.3293372829749846,
+      0.4944918263927293,
+      0.666867954287852,
+      0.7743625822178195,
+      0.8236333777604601,
+      0.862693398070612
+    ],
+    "timing_quality": 0.7606380478735513,
+    "unmasked_binding_score": 1.0927648286411737,
+    "predicted_efficacy_pct": 102.73620468489042,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.843302661707517,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": true,
+    "passed_gate4": false,
+    "estimated_mw_da": 5762.19,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG; Mutations: Y25W, G28A"
+  },
+  {
+    "candidate_id": "GLP1-GM-942303",
+    "phase_generated": 3,
+    "sequence": "HTEGTFTSDVSAYLQGQAWKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Cathepsin B-cleavable tetrapeptide GFLG",
+        "smiles": "NCC(=O)NC(Cc1ccccc1)C(=O)NC(CC(C)C)C(=O)NCC(=O)O"
+      },
+      {
+        "type": "mutation",
+        "position": 19,
+        "detail": "Y25W \u2014 Larger aromatic, may improve receptor contact",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "cathepsin_GFLG",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      },
+      {
+        "position": 19,
+        "from": "Y",
+        "to": "W",
+        "rationale": "Larger aromatic, may improve receptor contact"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 5.717099716234989,
+    "activation_curve": [
+      0.0,
+      0.2210646730303166,
+      0.3293372829749846,
+      0.4944918263927293,
+      0.666867954287852,
+      0.7743625822178195,
+      0.8236333777604601,
+      0.862693398070612
+    ],
+    "timing_quality": 0.7606380478735513,
+    "unmasked_binding_score": 1.0865792118087398,
+    "predicted_efficacy_pct": 101.11161835023404,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8270358796513305,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": true,
+    "passed_gate4": false,
+    "estimated_mw_da": 5838.219999999999,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG; Mutations: Y25W"
+  },
+  {
+    "candidate_id": "GLP1-GM-E562AD",
+    "phase_generated": 3,
+    "sequence": "HTEGTFTSDVSAYLQGQAAIEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Cathepsin B-cleavable tetrapeptide GFLG",
+        "smiles": "NCC(=O)NC(Cc1ccccc1)C(=O)NC(CC(C)C)C(=O)NCC(=O)O"
+      },
+      {
+        "type": "mutation",
+        "position": 20,
+        "detail": "L26I \u2014 Conservative branched chain",
+        "smiles": null
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "cathepsin_GFLG",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      },
+      {
+        "position": 20,
+        "from": "L",
+        "to": "I",
+        "rationale": "Conservative branched chain"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 5.717099716234989,
+    "activation_curve": [
+      0.0,
+      0.2210646730303166,
+      0.3293372829749846,
+      0.4944918263927293,
+      0.666867954287852,
+      0.7743625822178195,
+      0.8236333777604601,
+      0.862693398070612
+    ],
+    "timing_quality": 0.7606380478735513,
+    "unmasked_binding_score": 1.011082330026482,
+    "predicted_efficacy_pct": 92.8413696758732,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8291530620069216,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": true,
+    "passed_gate4": false,
+    "estimated_mw_da": 5708.17,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG; Mutations: L26I"
+  }
+]

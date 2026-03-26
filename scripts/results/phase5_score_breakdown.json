@@ -1,0 +1,83 @@
+[
+  {
+    "candidate_id": "GLP1-GM-F54D54",
+    "components": {
+      "masking_score": {
+        "raw": 82.51,
+        "normalized": 0.8685,
+        "weighted": 0.2606
+      },
+      "timing_score": {
+        "raw": 0.7606,
+        "normalized": 0.7606,
+        "weighted": 0.1902
+      },
+      "binding_score": {
+        "raw": 1.0928,
+        "normalized": 0.7292,
+        "weighted": 0.1823
+      },
+      "stability_score": {
+        "raw": 0.8049,
+        "normalized": 0.8049,
+        "weighted": 0.161
+      }
+    },
+    "final_score": 0.794,
+    "rank": 1
+  },
+  {
+    "candidate_id": "GLP1-GM-942303",
+    "components": {
+      "masking_score": {
+        "raw": 82.51,
+        "normalized": 0.8685,
+        "weighted": 0.2606
+      },
+      "timing_score": {
+        "raw": 0.7606,
+        "normalized": 0.7606,
+        "weighted": 0.1902
+      },
+      "binding_score": {
+        "raw": 1.0866,
+        "normalized": 0.7227,
+        "weighted": 0.1807
+      },
+      "stability_score": {
+        "raw": 0.7649,
+        "normalized": 0.7649,
+        "weighted": 0.153
+      }
+    },
+    "final_score": 0.7844,
+    "rank": 2
+  },
+  {
+    "candidate_id": "GLP1-GM-E562AD",
+    "components": {
+      "masking_score": {
+        "raw": 82.51,
+        "normalized": 0.8685,
+        "weighted": 0.2606
+      },
+      "timing_score": {
+        "raw": 0.7606,
+        "normalized": 0.7606,
+        "weighted": 0.1902
+      },
+      "binding_score": {
+        "raw": 1.0111,
+        "normalized": 0.6432,
+        "weighted": 0.1608
+      },
+      "stability_score": {
+        "raw": 0.6786,
+        "normalized": 0.6786,
+        "weighted": 0.1357
+      }
+    },
+    "final_score": 0.7472,
+    "rank": 3
+  }
+]

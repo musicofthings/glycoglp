@@ -1,0 +1,1468 @@
+[
+  {
+    "candidate_id": "GLP1-GM-C3C7A9",
+    "phase_generated": 2,
+    "sequence": "HTEGTFTSDVSAYLQGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "para-Aminobenzyl carbamate / ester prodrug",
+        "smiles": "O=C(Nc1ccc(CO)cc1)CCCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "PABC_ester",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 2.7762047744441967,
+    "activation_curve": [
+      0.0,
+      0.331936232858104,
+      0.4963748985164298,
+      0.6679680223165836,
+      0.7660249042986893,
+      0.8392905512493061,
+      0.842032520922959,
+      0.8438738008856292
+    ],
+    "timing_quality": 0.6250200089466983,
+    "unmasked_binding_score": 0.9692869249434838,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5960.280107959999,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: para-Aminobenzyl carbamate / ester prodrug"
+  },
+  {
+    "candidate_id": "GLP1-GM-3B9589",
+    "phase_generated": 2,
+    "sequence": "HTEGTFTSDVSAYLQGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Simple aliphatic ester",
+        "smiles": "OC(=O)CCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "ester_simple",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 1.0276162428325721,
+    "activation_curve": [
+      0.021284697324351644,
+      0.5636906329807109,
+      0.7203506538367511,
+      0.7961824178731388,
+      0.8595658033864986,
+      0.8658211272633187,
+      0.861152384517231,
+      0.8623648681877965
+    ],
+    "timing_quality": 0.4983076134560731,
+    "unmasked_binding_score": 0.9754954787092849,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5841.206608672,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Simple aliphatic ester"
+  },
+  {
+    "candidate_id": "GLP1-GM-53AE4B",
+    "phase_generated": 2,
+    "sequence": "HTEGTFTSDVSAYLQGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Carbonate ester",
+        "smiles": "OC(=O)OCCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "carbonate",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 2.1181515380713263,
+    "activation_curve": [
+      0.0,
+      0.40529963640406036,
+      0.5723910104810467,
+      0.731412402922142,
+      0.8423063034589268,
+      0.875571144595737,
+      0.8829944742984825,
+      0.8905277137065045
+    ],
+    "timing_quality": 0.5921313882424227,
+    "unmasked_binding_score": 0.9989214440296416,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5857.201523291999,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Carbonate ester"
+  },
+  {
+    "candidate_id": "GLP1-GM-EE18BF",
+    "phase_generated": 2,
+    "sequence": "HTEGTFTSDVSAYLQGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Disulfide reductase-cleavable",
+        "smiles": "SSCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "disulfide",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 3.926500435426706,
+    "activation_curve": [
+      0.0,
+      0.2889551576497926,
+      0.4369643760167966,
+      0.6141486167593684,
+      0.7401767020377656,
+      0.8170067022727447,
+      0.8456296402761005,
+      0.8968188843375909
+    ],
+    "timing_quality": 0.6754845228241365,
+    "unmasked_binding_score": 0.9943876500272771,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5847.145271367999,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Disulfide reductase-cleavable"
+  },
+  {
+    "candidate_id": "GLP1-GM-90223C",
+    "phase_generated": 2,
+    "sequence": "HTEGTFTSDVSAYLQGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Cathepsin B-cleavable tetrapeptide GFLG",
+        "smiles": "NCC(=O)NC(Cc1ccccc1)C(=O)NC(CC(C)C)C(=O)NCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "cathepsin_GFLG",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 5.717099716234989,
+    "activation_curve": [
+      0.0,
+      0.2210646730303166,
+      0.3293372829749846,
+      0.4944918263927293,
+      0.666867954287852,
+      0.7743625822178195,
+      0.8236333777604601,
+      0.862693398070612
+    ],
+    "timing_quality": 0.7606380478735513,
+    "unmasked_binding_score": 0.9864096157343479,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 6115.385969995999,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG"
+  },
+  {
+    "candidate_id": "GLP1-GM-3C77BF",
+    "phase_generated": 2,
+    "sequence": "HTEGTFTSDVSAYLQGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 12,
+        "detail": "S18A",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 15,
+        "detail": "E21Q",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "pH-sensitive hydrazone",
+        "smiles": "NN=CC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "pH_sensitive_hydrazone",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 12,
+        "from": "S",
+        "to": "A"
+      },
+      {
+        "position": 15,
+        "from": "E",
+        "to": "Q"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 74.7724832347263,
+    "linker_half_life_h": 7.035029819519574,
+    "activation_curve": [
+      0.0009058490690174555,
+      0.19165122010502345,
+      0.29227307532046737,
+      0.4762694984849995,
+      0.636594645024006,
+      0.7678682889335008,
+      0.826667067583867,
+      0.8867181516048047
+    ],
+    "timing_quality": 0.7419467809889806,
+    "unmasked_binding_score": 1.0181496372262744,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5811.207277367999,
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: pH-sensitive hydrazone"
+  },
+  {
+    "candidate_id": "GLP1-GM-DCC859",
+    "phase_generated": 2,
+    "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "para-Aminobenzyl carbamate / ester prodrug",
+        "smiles": "O=C(Nc1ccc(CO)cc1)CCCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "PABC_ester",
+    "mutations": [],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 73.99846213076735,
+    "linker_half_life_h": 2.9373853813534017,
+    "activation_curve": [
+      0.00030631492594417444,
+      0.27765723593104435,
+      0.422583871123517,
+      0.5793465982419638,
+      0.6862629437344917,
+      0.7599515952319259,
+      0.7636818088311441,
+      0.7681506140851121
+    ],
+    "timing_quality": 0.6501723928388359,
+    "unmasked_binding_score": 0.8934721456452087,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5947.2401079599995,
+    "synthesis_notes": "Backbone: native; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: para-Aminobenzyl carbamate / ester prodrug"
+  },
+  {
+    "candidate_id": "GLP1-GM-643FEC",
+    "phase_generated": 2,
+    "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Simple aliphatic ester",
+        "smiles": "OC(=O)CCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "ester_simple",
+    "mutations": [],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 73.99846213076735,
+    "linker_half_life_h": 1.0832105887339627,
+    "activation_curve": [
+      0.0017657335845371104,
+      0.5062673200453986,
+      0.6546407720675083,
+      0.7499379354270148,
+      0.8199419024364919,
+      0.8266765272428948,
+      0.8003303854484763,
+      0.8060685955178669
+    ],
+    "timing_quality": 0.5131096219679466,
+    "unmasked_binding_score": 0.9248499358254245,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5828.166608672,
+    "synthesis_notes": "Backbone: native; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Simple aliphatic ester"
+  },
+  {
+    "candidate_id": "GLP1-GM-B71518",
+    "phase_generated": 2,
+    "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Carbonate ester",
+        "smiles": "OC(=O)OCCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "carbonate",
+    "mutations": [],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 73.99846213076735,
+    "linker_half_life_h": 2.017069749770375,
+    "activation_curve": [
+      0.003156050035903405,
+      0.37984747941886665,
+      0.5111094142432647,
+      0.642893067321977,
+      0.7159103917887057,
+      0.7781448614595604,
+      0.7778532499418678,
+      0.7859381501229629
+    ],
+    "timing_quality": 0.5804631020308357,
+    "unmasked_binding_score": 0.9081858597207303,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5844.161523291999,
+    "synthesis_notes": "Backbone: native; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Carbonate ester"
+  },
+  {
+    "candidate_id": "GLP1-GM-4D5E3F",
+    "phase_generated": 2,
+    "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Disulfide reductase-cleavable",
+        "smiles": "SSCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "disulfide",
+    "mutations": [],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 73.99846213076735,
+    "linker_half_life_h": 3.380784805458103,
+    "activation_curve": [
+      0.0,
+      0.25415904060875816,
+      0.43448174700540537,
+      0.5508928913787032,
+      0.6752561746906058,
+      0.7809030361140682,
+      0.815139491098274,
+      0.788825082924035
+    ],
+    "timing_quality": 0.6766578830033626,
+    "unmasked_binding_score": 0.9181147489149489,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5834.105271367999,
+    "synthesis_notes": "Backbone: native; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Disulfide reductase-cleavable"
+  },
+  {
+    "candidate_id": "GLP1-GM-27CF42",
+    "phase_generated": 2,
+    "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Cathepsin B-cleavable tetrapeptide GFLG",
+        "smiles": "NCC(=O)NC(Cc1ccccc1)C(=O)NC(CC(C)C)C(=O)NCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "cathepsin_GFLG",
+    "mutations": [],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 73.99846213076735,
+    "linker_half_life_h": 5.089525312963591,
+    "activation_curve": [
+      0.017286976444055923,
+      0.19215254519036593,
+      0.32777370595891536,
+      0.4909651269009961,
+      0.6314419812226361,
+      0.7284405240010102,
+      0.7699909902395861,
+      0.7905350934449186
+    ],
+    "timing_quality": 0.7383266038266357,
+    "unmasked_binding_score": 0.9268311110188102,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 6102.345969995999,
+    "synthesis_notes": "Backbone: native; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG"
+  },
+  {
+    "candidate_id": "GLP1-GM-20178F",
+    "phase_generated": 2,
+    "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "pH-sensitive hydrazone",
+        "smiles": "NN=CC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "pH_sensitive_hydrazone",
+    "mutations": [],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 73.99846213076735,
+    "linker_half_life_h": 6.804730502410134,
+    "activation_curve": [
+      0.0023216988962625595,
+      0.15069743426840768,
+      0.27060839325372105,
+      0.41944471690531904,
+      0.5609684308348764,
+      0.6854053083962756,
+      0.7330354668109181,
+      0.782201854963997
+    ],
+    "timing_quality": 0.757328188120551,
+    "unmasked_binding_score": 0.9146722501998209,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5798.167277367999,
+    "synthesis_notes": "Backbone: native; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: pH-sensitive hydrazone"
+  },
+  {
+    "candidate_id": "GLP1-GM-F0B9F8",
+    "phase_generated": 2,
+    "sequence": "HTNGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 3,
+        "detail": "E9N",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "para-Aminobenzyl carbamate / ester prodrug",
+        "smiles": "O=C(Nc1ccc(CO)cc1)CCCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "PABC_ester",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 3,
+        "from": "E",
+        "to": "N"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 71.61342513356793,
+    "linker_half_life_h": 2.6917662949685726,
+    "activation_curve": [
+      0.0,
+      0.32764979511355674,
+      0.47037212600038014,
+      0.6013982239266817,
+      0.6970890895940127,
+      0.7540246348097265,
+      0.7931713278909577,
+      0.791584992889248
+    ],
+    "timing_quality": 0.6188417048884827,
+    "unmasked_binding_score": 0.9063298852334661,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5962.25010796,
+    "synthesis_notes": "Backbone: A8T_E9N; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: para-Aminobenzyl carbamate / ester prodrug"
+  },
+  {
+    "candidate_id": "GLP1-GM-68AB16",
+    "phase_generated": 2,
+    "sequence": "HTNGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 3,
+        "detail": "E9N",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Simple aliphatic ester",
+        "smiles": "OC(=O)CCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "ester_simple",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 3,
+        "from": "E",
+        "to": "N"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 71.61342513356793,
+    "linker_half_life_h": 1.1360107552543708,
+    "activation_curve": [
+      0.009274384815581807,
+      0.4624787801994053,
+      0.5776293762241235,
+      0.677018047909655,
+      0.7327483789979563,
+      0.7449782539466733,
+      0.7426973470151559,
+      0.7446946542173635
+    ],
+    "timing_quality": 0.5171965475964586,
+    "unmasked_binding_score": 0.8651082802605161,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5843.176608672,
+    "synthesis_notes": "Backbone: A8T_E9N; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Simple aliphatic ester"
+  },
+  {
+    "candidate_id": "GLP1-GM-EBE0DC",
+    "phase_generated": 2,
+    "sequence": "HTNGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 3,
+        "detail": "E9N",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Carbonate ester",
+        "smiles": "OC(=O)OCCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "carbonate",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 3,
+        "from": "E",
+        "to": "N"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 71.61342513356793,
+    "linker_half_life_h": 2.1685028277241396,
+    "activation_curve": [
+      0.01471491972993157,
+      0.32342596090802916,
+      0.49636677466510615,
+      0.634374889535496,
+      0.7281286255292698,
+      0.7680571484118596,
+      0.7645308653486824,
+      0.7890397130772705
+    ],
+    "timing_quality": 0.5993170989666428,
+    "unmasked_binding_score": 0.9030512502420494,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5859.171523292,
+    "synthesis_notes": "Backbone: A8T_E9N; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Carbonate ester"
+  },
+  {
+    "candidate_id": "GLP1-GM-C58640",
+    "phase_generated": 2,
+    "sequence": "HTNGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 3,
+        "detail": "E9N",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Disulfide reductase-cleavable",
+        "smiles": "SSCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "disulfide",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 3,
+        "from": "E",
+        "to": "N"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 71.61342513356793,
+    "linker_half_life_h": 4.031837553541046,
+    "activation_curve": [
+      0.008638280136981882,
+      0.2117737270997166,
+      0.34182704317406937,
+      0.4752457236200657,
+      0.6086386210874757,
+      0.7104858099149357,
+      0.732382518961977,
+      0.7647612543667677
+    ],
+    "timing_quality": 0.7186456185732807,
+    "unmasked_binding_score": 0.8693227719016773,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5849.115271367999,
+    "synthesis_notes": "Backbone: A8T_E9N; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Disulfide reductase-cleavable"
+  },
+  {
+    "candidate_id": "GLP1-GM-60E633",
+    "phase_generated": 2,
+    "sequence": "HTNGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 3,
+        "detail": "E9N",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Cathepsin B-cleavable tetrapeptide GFLG",
+        "smiles": "NCC(=O)NC(Cc1ccccc1)C(=O)NC(CC(C)C)C(=O)NCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "cathepsin_GFLG",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 3,
+        "from": "E",
+        "to": "N"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 71.61342513356793,
+    "linker_half_life_h": 5.553223566693308,
+    "activation_curve": [
+      0.01743934526167792,
+      0.1864311786328539,
+      0.31020932061101897,
+      0.4467679209191319,
+      0.5946647055712034,
+      0.6964154383464862,
+      0.7554749006480331,
+      0.7712336616817185
+    ],
+    "timing_quality": 0.751997107435107,
+    "unmasked_binding_score": 0.9087817335785916,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 6117.355969996,
+    "synthesis_notes": "Backbone: A8T_E9N; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG"
+  },
+  {
+    "candidate_id": "GLP1-GM-2FAE3D",
+    "phase_generated": 2,
+    "sequence": "HTNGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8T",
+        "smiles": null
+      },
+      {
+        "type": "mutation",
+        "position": 3,
+        "detail": "E9N",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "pH-sensitive hydrazone",
+        "smiles": "NN=CC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "pH_sensitive_hydrazone",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "T"
+      },
+      {
+        "position": 3,
+        "from": "E",
+        "to": "N"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 71.61342513356793,
+    "linker_half_life_h": 7.212940136967065,
+    "activation_curve": [
+      0.011712470934673194,
+      0.15085936273556555,
+      0.2644029472559931,
+      0.3909750619290021,
+      0.51560491603033,
+      0.6544219139392455,
+      0.695690377929488,
+      0.7550428719914897
+    ],
+    "timing_quality": 0.7280670350515381,
+    "unmasked_binding_score": 0.8961869788498968,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5813.1772773679995,
+    "synthesis_notes": "Backbone: A8T_E9N; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: pH-sensitive hydrazone"
+  },
+  {
+    "candidate_id": "GLP1-GM-B19A5E",
+    "phase_generated": 2,
+    "sequence": "HBEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8B",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "para-Aminobenzyl carbamate / ester prodrug",
+        "smiles": "O=C(Nc1ccc(CO)cc1)CCCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "PABC_ester",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "B"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 76.95347493055884,
+    "linker_half_life_h": 3.026684264991508,
+    "activation_curve": [
+      0.0,
+      0.3213549198616925,
+      0.4948983654086478,
+      0.6423507960751127,
+      0.7702107399864612,
+      0.8517424180256754,
+      0.8807462412255052,
+      0.8865162678529441
+    ],
+    "timing_quality": 0.6495582031196429,
+    "unmasked_binding_score": 0.9927506762179539,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": true,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5987.300107959999,
+    "synthesis_notes": "Backbone: Aib8; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: para-Aminobenzyl carbamate / ester prodrug"
+  },
+  {
+    "candidate_id": "GLP1-GM-2C3187",
+    "phase_generated": 2,
+    "sequence": "HBEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+    "modifications": [
+      {
+        "type": "mutation",
+        "position": 2,
+        "detail": "A8B",
+        "smiles": null
+      },
+      {
+        "type": "glycan",
+        "position": 3,
+        "detail": "biantennary_sialylated (N-linked) at pos 9",
+        "smiles": null
+      },
+      {
+        "type": "linker",
+        "position": 3,
+        "detail": "Simple aliphatic ester",
+        "smiles": "OC(=O)CCC(=O)O"
+      }
+    ],
+    "glycan_type": "biantennary_sialylated",
+    "glycan_position": 3,
+    "linker_type": "ester_simple",
+    "mutations": [
+      {
+        "position": 2,
+        "from": "A",
+        "to": "B"
+      }
+    ],
+    "sasa_suppression_pct": 82.50861011389439,
+    "masked_binding_score": 0.4419914695997037,
+    "af3_confidence": 76.95347493055884,
+    "linker_half_life_h": 0.9281532868551425,
+    "activation_curve": [
+      0.0007203357323257792,
+      0.6082697028357588,
+      0.7555284898012012,
+      0.8050619323223367,
+      0.8588563972726188,
+      0.879514277357341,
+      0.8582170562183472,
+      0.888815159690756
+    ],
+    "timing_quality": 0.4680167845814549,
+    "unmasked_binding_score": 0.9860873345806052,
+    "predicted_efficacy_pct": 0.0,
+    "early_activation": 0.0,
+    "late_activation": 0.0,
+    "late_early_ratio": 0.0,
+    "masking_score": 0.0,
+    "timing_score": 0.0,
+    "binding_score": 0.0,
+    "stability_score": 0.8,
+    "final_score": 0.0,
+    "rank": 0,
+    "passed_gate1": true,
+    "passed_gate2": false,
+    "passed_gate3": false,
+    "passed_gate4": false,
+    "estimated_mw_da": 5868.226608671999,
+    "synthesis_notes": "Backbone: Aib8; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Simple aliphatic ester"
+  }
+]

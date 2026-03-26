@@ -4,7 +4,16 @@ export const runtime = 'edge';
 
 type Source = 'demo' | 'rcsb' | 'alphafold' | 'pdbe';
 
-const ALLOWED_DEMOS = new Set(['example1', 'example2', 'glyco_demo']);
+const ALLOWED_DEMOS = new Set([
+  'example1',
+  'example2',
+  'glyco_demo',
+  // GLP-1 glyco-masking program candidates
+  'glp1_reference',
+  'glp1_gm_f54d54',
+  'glp1_gm_942303',
+  'glp1_gm_e562ad',
+]);
 
 function cleanId(value: string): string {
   return value.trim();

@@ -1,0 +1,284 @@
+{
+  "top_candidates": [
+    {
+      "rank": 1,
+      "candidate_id": "GLP1-GM-F54D54",
+      "sequence": "HTEGTFTSDVSAYLQGQAWKEAIAWLVKGR",
+      "glycan_type": "biantennary_sialylated",
+      "glycan_position": "pos 9 (canonical)",
+      "linker_type": "cathepsin_GFLG",
+      "key_mutations": [
+        {
+          "position": 2,
+          "from": "A",
+          "to": "T"
+        },
+        {
+          "position": 12,
+          "from": "S",
+          "to": "A"
+        },
+        {
+          "position": 15,
+          "from": "E",
+          "to": "Q"
+        },
+        {
+          "position": 19,
+          "from": "Y",
+          "to": "W"
+        },
+        {
+          "position": 22,
+          "from": "G",
+          "to": "A"
+        }
+      ],
+      "sasa_suppression": 82.5,
+      "linker_half_life_h": 5.72,
+      "predicted_efficacy_pct": 102.7,
+      "late_early_ratio": 5.58,
+      "final_score": 0.794,
+      "estimated_mw_da": 5762.2,
+      "activation_curve_timepoints_h": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        4.0,
+        8.0,
+        12.0,
+        24.0
+      ],
+      "activation_curve": [
+        0.0,
+        0.2211,
+        0.3293,
+        0.4945,
+        0.6669,
+        0.7744,
+        0.8236,
+        0.8627
+      ],
+      "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG; Mutations: Y25W, G28A"
+    },
+    {
+      "rank": 2,
+      "candidate_id": "GLP1-GM-942303",
+      "sequence": "HTEGTFTSDVSAYLQGQAWKEFIAWLVKGR",
+      "glycan_type": "biantennary_sialylated",
+      "glycan_position": "pos 9 (canonical)",
+      "linker_type": "cathepsin_GFLG",
+      "key_mutations": [
+        {
+          "position": 2,
+          "from": "A",
+          "to": "T"
+        },
+        {
+          "position": 12,
+          "from": "S",
+          "to": "A"
+        },
+        {
+          "position": 15,
+          "from": "E",
+          "to": "Q"
+        },
+        {
+          "position": 19,
+          "from": "Y",
+          "to": "W",
+          "rationale": "Larger aromatic, may improve receptor contact"
+        }
+      ],
+      "sasa_suppression": 82.5,
+      "linker_half_life_h": 5.72,
+      "predicted_efficacy_pct": 101.1,
+      "late_early_ratio": 5.58,
+      "final_score": 0.7844,
+      "estimated_mw_da": 5838.2,
+      "activation_curve_timepoints_h": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        4.0,
+        8.0,
+        12.0,
+        24.0
+      ],
+      "activation_curve": [
+        0.0,
+        0.2211,
+        0.3293,
+        0.4945,
+        0.6669,
+        0.7744,
+        0.8236,
+        0.8627
+      ],
+      "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG; Mutations: Y25W"
+    },
+    {
+      "rank": 3,
+      "candidate_id": "GLP1-GM-E562AD",
+      "sequence": "HTEGTFTSDVSAYLQGQAAIEFIAWLVKGR",
+      "glycan_type": "biantennary_sialylated",
+      "glycan_position": "pos 9 (canonical)",
+      "linker_type": "cathepsin_GFLG",
+      "key_mutations": [
+        {
+          "position": 2,
+          "from": "A",
+          "to": "T"
+        },
+        {
+          "position": 12,
+          "from": "S",
+          "to": "A"
+        },
+        {
+          "position": 15,
+          "from": "E",
+          "to": "Q"
+        },
+        {
+          "position": 20,
+          "from": "L",
+          "to": "I",
+          "rationale": "Conservative branched chain"
+        }
+      ],
+      "sasa_suppression": 82.5,
+      "linker_half_life_h": 5.72,
+      "predicted_efficacy_pct": 92.8,
+      "late_early_ratio": 5.58,
+      "final_score": 0.7472,
+      "estimated_mw_da": 5708.2,
+      "activation_curve_timepoints_h": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        4.0,
+        8.0,
+        12.0,
+        24.0
+      ],
+      "activation_curve": [
+        0.0,
+        0.2211,
+        0.3293,
+        0.4945,
+        0.6669,
+        0.7744,
+        0.8236,
+        0.8627
+      ],
+      "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG; Mutations: L26I"
+    }
+  ],
+  "baseline_comparison": {
+    "baseline_glp1": {
+      "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+      "sasa_suppression": "0% (no masking)",
+      "early_activation": "~95% at t=0",
+      "late_activation": "~90% at t=4h",
+      "late_early_ratio": 1.05,
+      "nausea_risk": "HIGH (immediate full activation)",
+      "t_half_linker": "N/A"
+    },
+    "GLP1-GM-F54D54": {
+      "sasa_suppression_pct": 82.5,
+      "early_activation": 4.5,
+      "late_activation": 25.2,
+      "late_early_ratio": 5.58,
+      "vs_baseline_improvement": "5.3\u00d7",
+      "nausea_risk": "LOW (glycan masking active during absorption phase)"
+    },
+    "GLP1-GM-942303": {
+      "sasa_suppression_pct": 82.5,
+      "early_activation": 4.5,
+      "late_activation": 24.8,
+      "late_early_ratio": 5.58,
+      "vs_baseline_improvement": "5.3\u00d7",
+      "nausea_risk": "LOW (glycan masking active during absorption phase)"
+    },
+    "GLP1-GM-E562AD": {
+      "sasa_suppression_pct": 82.5,
+      "early_activation": 4.1,
+      "late_activation": 22.8,
+      "late_early_ratio": 5.58,
+      "vs_baseline_improvement": "5.3\u00d7",
+      "nausea_risk": "LOW (glycan masking active during absorption phase)"
+    }
+  },
+  "recommendation": {
+    "synthesize_first": "GLP1-GM-F54D54",
+    "sequence": "HTEGTFTSDVSAYLQGQAWKEAIAWLVKGR",
+    "glycan": "biantennary_sialylated",
+    "glycan_position": "Position 9 (GLP-1 canonical)",
+    "linker": "cathepsin_GFLG",
+    "key_mutations": [
+      "A8T",
+      "S18A",
+      "E21Q",
+      "Y25W",
+      "G28A"
+    ],
+    "estimated_mw_da": 5762.2,
+    "rationale": "Highest composite score (0.7940). Achieves 82.5% SASA suppression (masking nausea-triggering N-terminal exposure), linker t\u00bd = 5.72 h (delayed activation onset), 102.7% predicted receptor efficacy post-cleavage, and 5.6\u00d7 late/early activation improvement vs. baseline GLP-1.",
+    "synthesis_notes": "Backbone: A8T_S18A_E21Q; Glycan: Complex biantennary sialylated N-glycan (SA2Gal2GlcNAc2Man3GlcNAc2); Attach: pos 9 (N-linked); Linker: Cathepsin B-cleavable tetrapeptide GFLG; Mutations: Y25W, G28A"
+  },
+  "phase_summary": [
+    {
+      "phase": 1,
+      "name": "Masking Feasibility",
+      "candidates_in": 50,
+      "candidates_out": 10,
+      "gate_passed": true,
+      "top_sasa_suppression": 82.50861011389439,
+      "avg_sasa_suppression": 78.48822727873093
+    },
+    {
+      "phase": 2,
+      "name": "Linker Timing",
+      "candidates_in": 20,
+      "candidates_out": 5,
+      "gate_passed": true,
+      "linker_types_passing": [
+        "cathepsin_GFLG",
+        "disulfide"
+      ],
+      "avg_half_life_h": 4.754494190978208
+    },
+    {
+      "phase": 3,
+      "name": "Receptor Activation",
+      "candidates_in": 50,
+      "candidates_out": 3,
+      "gate_passed": true,
+      "avg_efficacy_pct": 98.89639757033255
+    },
+    {
+      "phase": 4,
+      "name": "Temporal PK Model",
+      "candidates_in": 3,
+      "candidates_out": 3,
+      "gate_passed": true,
+      "late_early_ratios": [
+        5.58,
+        5.58,
+        5.58
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "Final Selection",
+      "candidates_in": 3,
+      "candidates_out": 3,
+      "gate_passed": true
+    }
+  ]
+}
