@@ -59,7 +59,7 @@ type StoreState = {
 const defaultViewerState = (viewerId: string): ViewerState => ({
   selectedResidue: null,
   hoveredResidue: null,
-  structureId: viewerId.endsWith('b') ? 'demo:glyco_demo' : 'rcsb:4Z18',
+  structureId: viewerId.endsWith('b') ? 'demo:glp1_gm_f54d54' : 'demo:glp1_reference',
   representation: 'cartoon',
   colorMode: 'uniform',
   annotations: { highlighted: [], mutations: [], glycosylation: [] },
