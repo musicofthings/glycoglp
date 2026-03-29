@@ -122,7 +122,10 @@ export default function ViewerPage() {
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
           {VIEWER_IDS.map((viewerId) => {
             const viewer     = viewers[viewerId];
-            const structureId = viewer?.structureId ?? 'demo:glp1_reference';
+            // Mirror defaultViewerState defaults so viewer-b shows the glyco-masked
+            // candidate from first paint rather than flashing glp1_reference briefly.
+            const defaultId   = viewerId.endsWith('b') ? 'demo:glp1_gm_f54d54' : 'demo:glp1_reference';
+            const structureId = viewer?.structureId ?? defaultId;
 
             return (
               <section
